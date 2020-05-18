@@ -13,7 +13,8 @@ const getWeather = (lat, long, callback) => {
             callback(undefined, {
                 temperature: body.current.temperature,
                 feelsLike: body.current.feelslike,
-                forecast: "Hello There. The current temperature is " + body.current.temperature + " Degrees and it feels like " + body.current.feelslike + " Degrees in " + body.location.name + "(" +body.location.region + " - " + body.location.country + ")",
+                humidity: body.current.humidity,
+                forecast: "Hello There. The current temperature is " + body.current.temperature + " Degrees and it feels like " + body.current.feelslike + " Degrees in " + body.location.name + "(" +body.location.region + " - " + body.location.country + "), Also the humidity is " + body.current.humidity + '%',
                 place: body.location.name,
                 region: body.location.region,
                 country: body.location.country 
